@@ -1,0 +1,16 @@
+package biblioteca.util;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public final class Fechas {
+
+    private static final DateTimeFormatter FORMATO = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    private Fechas() {
+    }
+
+    public static String formatear(LocalDate fecha) {
+        return fecha == null ? "-" : FORMATO.format(fecha);
+    }
+}
